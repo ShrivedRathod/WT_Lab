@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Practical</title>
+
+   
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: linen;
+            font-family: Verdana, sans-serif;
+        }
+
+        h1, h2, p {
+            text-align: center;
+        }
+
+        #uniqueHeading {
+            color: green;
+            
+        }
+
+        .highlight {
+            color: blue;
+            font-size: 20px;
+        }
+
+       
+        a:link {
+            color: red;
+        }
+        
+        a:hover {
+            color: orange;
+            cursor: url('cursor.png'), pointer; 
+        }
+       
+    </style>
+</head>
+
+<body style="background-color: lavender;"> 
+
+    <h1>My CSS Web Page</h1>
+    <h2 id="uniqueHeading">This is an UNIQUE HEADING</h2>
+
+    <p>This is a normal paragraph.</p>
+    <p class="highlight">This line is highligted.</p>
+    <p class="highlight large">Extra HIghlighted text.</p>
+
+    <h2>Background Image</h2>
+    <p style="background-image: url('pattern.png'); background-repeat: repeat;">
+    </p>
+   
+
+    <h2>Link Styling</h2>
+    <a href="https://www.google.com" target="_blank">Click here (Google)</a>
+</body>
+</html>
