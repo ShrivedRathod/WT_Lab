@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+</head>
+<body>
+
+  <h2>Student Registration Form</h2>
+  <form action="/action_page.php">
+
+    
+    <label for="sname">Student Name:</label><br>
+    <input type="text" id="sname" name="sname" required><br><br>
+
+    <label for="rollno">Roll No:</label><br>
+    <input type="number" id="rollno" name="rollno" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    
+    <h3>Select Your Branch</h3>
+    <select id="branch" name="branch">
+      <option value="Computer Technology">Computer Technology</option>
+      <option value="Mechanical Engineering">Mechanical Engineering</option>
+      <option value="Chemical Engineering">Chemical Engineering</option>
+    </select><br><br>
+
+    
+    <h3>Select Preferred Languages</h3>
+    <p>You can select more than one language:</p>
+    <select id="language" name="language" size="3" multiple>
+      <option value="English">English</option>
+      <option value="Hindi">Hindi</option>
+      <option value="French">French</option>
+    </select><br><br>
+
+    
+    <h3>Gender</h3>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br><br>
+
+    
+    <h3>Hobbies</h3>
+    <input type="checkbox" id="reading" name="hobby" value="Reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="sports" name="hobby" value="Sports">
+    <label for="sports">Sports</label>
+    <input type="checkbox" id="music" name="hobby" value="Music">
+    <label for="music">Music</label><br><br>
+
+    
+    <h3>Note for Students</h3>
+    <textarea name="note" rows="3" cols="40">Attendance should be above 75%</textarea><br><br>
+
+    
+    <h3><b>Parent Information</b></h3>
+    <label for="fathername">Father's Name:</label><br>
+    <input type="text" id="fathername" name="fathername"><br><br>
+
+    <label for="mothername">Mother's Name:</label><br>
+    <input type="text" id="mothername" name="mothername"><br><br>
+
+    
+    <input type="submit" value="Register">
+
+  </form>
+
+</body>
+</html>
