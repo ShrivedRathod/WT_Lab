@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Employee (Second Record)</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 20px; }
+    h1 { text-align: center; color: #222; }
+    #out { background: #fff; border: 1px solid #ccc; padding: 12px; max-width: 480px; margin: 12px auto; }
+    p { margin: 6px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>Second Employee (via DOM)</h1>
+  <div id="out"></div>
+
+  <script>
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "employee.xml", false); 
+    xhr.send();
+
+    var xml = xhr.responseXML;
+    var list = xml.getElementsByTagName("employee");
+
+    if (list && list.length >= 2) {
+      var e = list[1];
+
+      var id   = e.getElementsByTagName("id")[0].textContent;
+      var name = e.getElementsByTagName("name")[0].textContent;
+      var dept = e.getElementsByTagName("department")[0].textContent;
+      var des  = e.getElementsByTagName("designation")[0].textContent;
+      var mail = e.getElementsByTagName("email")[0].textContent;
+      var sal  = e.getElementsByTagName("salary")[0].textContent;
+
+      document.getElementById("out").innerHTML =
+        "<p><b>ID:</b> " + id + "</p>" +
+        "<p><b>Name:</b> " + name + "</p>" +
+        "<p><b>Department:</b> " + dept + "</p>" +
+        "<p><b>Designation:</b> " + des + "</p>" +
+        "<p><b>Email:</b> " + mail + "</p>" +
+        "<p><b>Salary:</b> " + sal + "</p>";
+    } else {
+      document.getElementById("out").textContent = "Less than 2 employees in XML.";
+    }
+  </script>
+
+</body>
+</html>
